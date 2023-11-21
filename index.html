@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="img/Logo_ok.png" class="Logo">
+            <ul>
+                <li> <a href="#">Home</a></li>
+                <li> <a href="#">Connect</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="left-col">
+                <h1>THE<br>MUSIC<br>SOUND</h1>
+            </div>
+            <div class="right-col">
+                <p> Click here to Listen</p>
+                <img src="img/play_ok.png" id="icon">
+            </div>
+        </div>
+    </div>
+    <audio id="mysong">
+    <source src="img/DJ BoBo - EVERYBODY.mp3" type="audio/mp3">
+    </audio>
+<script>
+    var mysong = document.getElementById("mysong");
+    var icon = document.getElementById("icon");
+    icon.onclick = function (){
+        if(mysong.paused){
+            mysong.play();
+            icon.src= "img/pause_ok.png";
+        }else{
+            mysong.pause();
+            icon.src = "img/play_ok.png";
+        }
+    }
+
+</script>
+</body>
+</html>
